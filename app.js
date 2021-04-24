@@ -9,10 +9,25 @@ require("dotenv").config();
 app.use(express.static("public"));
 
 
+
+
+app.get('/Contacto', function (req, res) {
+
+    //res.send('PAGINA NO ENCONTRADA');
+    res.redirect('http://localhost:8081/Contacto');
+    
+    res.end();
+});
+
+
+
+
 app.get('*', function (req, res) {
 
-    res.send('PAGINA NO ENCONTRADA');
+    //res.send('PAGINA NO ENCONTRADA');
+    res.redirect('http://localhost:8081/');
 
+    res.end();
 });
 
 
